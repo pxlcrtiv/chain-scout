@@ -1,0 +1,51 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt pytest
+
+      - name: Offline test suite (fixtures, deterministic)
+        run: python -m pytest tests/ -q
+
+      - name: Smoke — analyze the bundled demo wallet headlessly
+        run: |
+          python - <<'EOF'
+          from chain_scout.analysis import analyze
+          snap, report = analyze("0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045", "fixture")
+          assert 0 <= report.score <= 100
+          assert report.band
+          assert len(report.warnings) >= 1
+          print(f"demo score: {report.score}/100 ({report.band}); warnings: {len(report.warnings)}")
+          EOF
+
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: ruff lint
+        run: |
+          pip install ruff
+          ruff check chain_scout tests scripts app.py --output-format=github
