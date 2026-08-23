@@ -1,0 +1,61 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "chain-scout"
+version = "0.1.0"
+description = "AI wallet risk scanner: paste any Ethereum address -> plain-English risk report — rug-pulled tokens, dangerous approvals, holder concentration, estimated PnL. Keyless, testnet-first."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "pxlcrtiv" }]
+keywords = ["ethereum", "security", "risk", "wallet", "defi", "streamlit", "web3", "ai"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Security",
+    "Topic :: Office/Business :: Financial",
+]
+
+dependencies = [
+    "streamlit>=1.30",
+    "web3>=6.0",
+    "pandas>=2.0",
+    "requests>=2.31",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.5"]
+
+[tool.setuptools.packages.find]
+include = ["chain_scout*"]
+
+[tool.setuptools.package-data]
+chain_scout = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+markers = [
+    "network: hits the network — skipped in CI",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+ignore = [
+    "BLE001",  # blind excepts isolate one provider/network failure from the whole scan
+    "DTZ005",  # daily scheduler intentionally uses local wall-clock dates for
+    "DTZ011",  #   dated commits (see scripts/daily_update.py)
+]
+
+[tool.ruff.lint.per-file-ignores]
+# pytest helpers intentionally shadow nothing; import layout is fine
+"tests/*.py" = ["F811", "F401", "PLC2701"]
+# scripts are launchers with a shebang; executable bit is set in the repo
+"scripts/*.py" = ["EXE001"]
