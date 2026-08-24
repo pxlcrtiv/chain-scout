@@ -12,3 +12,10 @@ A token with no transfers in 30 days is 'dead' — yet it still shows a balance 
 
 > `chain-scout: dead_signal() window = 30 days`
 
+
+## 2026-08-24 — Tip of the day: Your cost basis is not public — PnL tools must say so
+
+Anyone claiming exact PnL from an address alone is guessing: cost basis lives off-chain (exchanges, wallets, tax records). Chain-scout only reports PnL where an entry price exists (demo wallets carry clearly-labeled demo entries); everything else is value-only. Treat 'AI PnL estimates' as entertainment, not tax advice.
+
+> `chain-scout: estimate_pnl() skips tokens without basis`
+
