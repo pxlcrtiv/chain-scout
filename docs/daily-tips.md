@@ -19,3 +19,10 @@ Anyone claiming exact PnL from an address alone is guessing: cost basis lives of
 
 > `chain-scout: estimate_pnl() skips tokens without basis`
 
+
+## 2026-08-25 — Tip of the day: Whitelist your exchanges in the phishing scan
+
+Inbound transfers from Binance/Coinbase hot wallets are normal activity; transfers from random EOA contracts are the airdrop-bait pattern. Chain-scout ships a small trusted-sender set (add your own via the fixture) and scores the share of unknown-sender inbound transfers in the last 30 days.
+
+> `chain-scout: trust_senders in fixtures/demo_wallet.json`
+
