@@ -26,3 +26,10 @@ Inbound transfers from Binance/Coinbase hot wallets are normal activity; transfe
 
 > `chain-scout: trust_senders in fixtures/demo_wallet.json`
 
+
+## 2026-08-26 — Tip of the day: Decimals lie: check the token contract, not the label
+
+A token with 6 decimals displays 1,000,000 units where one with 18 decimals shows 1,000,000,000,000,000,000 units of the same 'amount'. Scanners that ignore decimals produce fantasy valuations. Chain-scout always converts raw balances through the token's declared decimals before pricing.
+
+> `chain-scout: TokenHolding.decimals drives all value math`
+
