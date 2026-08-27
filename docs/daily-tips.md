@@ -33,3 +33,10 @@ A token with 6 decimals displays 1,000,000 units where one with 18 decimals show
 
 > `chain-scout: TokenHolding.decimals drives all value math`
 
+
+## 2026-08-27 — Tip of the day: Unlimited approval to a known router is still a risk
+
+Infinite allowances to Uniswap/SushiSwap routers can't be drained by the router code today — but router upgrades, governance attacks and exploit chains make 'known and safe' a status that decays. Chain-scout downgrades router approvals to 'watch' and tells you to right-size them when convenient.
+
+> `chain-scout: classify_approval() router branch -> 'watch'`
+
