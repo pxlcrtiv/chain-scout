@@ -40,3 +40,10 @@ Infinite allowances to Uniswap/SushiSwap routers can't be drained by the router 
 
 > `chain-scout: classify_approval() router branch -> 'watch'`
 
+
+## 2026-08-28 — Tip of the day: Rainbow-phishing uses NFT approvals, not just ERC-20
+
+setApprovalForAll is the ERC-721/1155 cousin of approve(): one signature and a marketplace contract can move every NFT you own. Chain-scout currently covers ERC-20; treat setApprovalForAll grants with the same paranoia and revoke them at the same cadence.
+
+> `revoke.cash covers both token standards`
+
