@@ -47,3 +47,10 @@ setApprovalForAll is the ERC-721/1155 cousin of approve(): one signature and a m
 
 > `revoke.cash covers both token standards`
 
+
+## 2026-08-29 — Tip of the day: A high risk score is a warning, not a verdict
+
+Risk scores aggregate public-data signals and miss everything off-chain (who controls the deployer key, what the team is doing, regulatory status). Chain-scout's report always says so, and the score formula is printed inside the app — read it before you act on it.
+
+> `chain-scout: 'How the score works' expander in app.py`
+
