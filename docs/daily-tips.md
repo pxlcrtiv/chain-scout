@@ -54,3 +54,10 @@ Risk scores aggregate public-data signals and miss everything off-chain (who con
 
 > `chain-scout: 'How the score works' expander in app.py`
 
+
+## 2026-08-30 — Tip of the day: Multichain wallets need per-chain scans
+
+An approval on Ethereum says nothing about your Arbitrum or Polygon exposure: allowances are per-chain, per-token, per-spender. Chain-scout is Ethereum-first (Sepolia default) — add RPC endpoints for other chains and re-run the same heuristics per chain.
+
+> `CHAIN_SCOUT_RPC_URL=https://… any chain's public RPC`
+
