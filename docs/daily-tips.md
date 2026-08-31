@@ -61,3 +61,10 @@ An approval on Ethereum says nothing about your Arbitrum or Polygon exposure: al
 
 > `CHAIN_SCOUT_RPC_URL=https://… any chain's public RPC`
 
+
+## 2026-08-31 — Tip of the day: Beware the 'verification' fake: verified code ≠ safe code
+
+Scam tokens get their source verified on explorers too — verification only proves the deployed bytecode matches some source, not that the source is honest (hidden mint functions, blacklisted-router tax, owner-only transfers all verify fine). Don't let a green 'verified' checkmark replace your own flag checks.
+
+> `chain-scout: treat holder/liquidity signals as primary, verified flag as noise`
+
