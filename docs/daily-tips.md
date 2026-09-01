@@ -68,3 +68,10 @@ Scam tokens get their source verified on explorers too — verification only pro
 
 > `chain-scout: treat holder/liquidity signals as primary, verified flag as noise`
 
+
+## 2026-09-01 — Tip of the day: Keyless scanners are reproducible scanners
+
+If a scanner needs your private API key, its results cannot be independently re-run — and 'trust me, I have the key' is exactly how scam tools operate. Chain-scout runs keyless (public RPC, free CoinGecko tier, bundled fixtures) so anyone can verify any report. Same logic applies to the tools you use.
+
+> `python scripts/fetch_fixtures.py   # rebuilds the demo data`
+
