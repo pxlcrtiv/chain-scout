@@ -75,3 +75,10 @@ If a scanner needs your private API key, its results cannot be independently re-
 
 > `python scripts/fetch_fixtures.py   # rebuilds the demo data`
 
+
+## 2026-09-02 — Tip of the day: Fast-blockchain scams are faster — check time-to-rug
+
+On chains with 2s blocks, a 'liquidity added, then removed within an hour' pattern is a rug you can watch in real time. For any token you buy on a fast chain, snapshot liquidity and top-10 holders when you enter, and diff them a week later. Chain-scout's fixture format makes such snapshots easy to persist.
+
+> `chain-scout: run the scanner weekly, diff token_rug scores`
+
