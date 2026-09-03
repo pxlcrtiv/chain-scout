@@ -82,3 +82,10 @@ On chains with 2s blocks, a 'liquidity added, then removed within an hour' patte
 
 > `chain-scout: run the scanner weekly, diff token_rug scores`
 
+
+## 2026-09-03 — Tip of the day: The permission triage: revoke / reduce / keep
+
+For every approval you find, pick a bucket: revoke now (EOA spender, known-bad, unlimited-on-unknown), reduce to a usable exact amount (routers you use monthly), keep only for actively-used core dapps. A monthly 10-minute triage removes 90% of wallet-drain surface.
+
+> `chain-scout: Approvals tab verdicts sort straight into these buckets`
+
