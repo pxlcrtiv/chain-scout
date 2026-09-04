@@ -89,3 +89,10 @@ For every approval you find, pick a bucket: revoke now (EOA spender, known-bad, 
 
 > `chain-scout: Approvals tab verdicts sort straight into these buckets`
 
+
+## 2026-09-04 — Tip of the day: Simulate before you sign — the free safety net
+
+Tenderly Simulation, Fire (formerly Flashbots Protect), and wallet 'transaction preview' features execute a tx against a copy of chain state and show you the exact token deltas — before any gas is spent. Use them for anything an AI assistant suggested; simulations beat reading code for catching value-extraction tricks.
+
+> `tenderly.co simulation of any approval/spend tx`
+
