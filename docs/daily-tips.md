@@ -96,3 +96,10 @@ Tenderly Simulation, Fire (formerly Flashbots Protect), and wallet 'transaction 
 
 > `tenderly.co simulation of any approval/spend tx`
 
+
+## 2026-09-05 — Tip of the day: Your scanner is only as good as its data freshness
+
+Token prices, holder counts and approvals decay in hours. A report that says 'looks fine' from last week is a lie this week. Chain-scout stamps every snapshot with its timestamp and marks fixtures as static demo data — always check the stamp before trusting a cached report.
+
+> `chain-scout: snapshot_ts in fixture meta + data_source label`
+
