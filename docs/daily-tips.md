@@ -103,3 +103,10 @@ Token prices, holder counts and approvals decay in hours. A report that says 'lo
 
 > `chain-scout: snapshot_ts in fixture meta + data_source label`
 
+
+## 2026-09-06 — Tip of the day: Revoke unlimited allowances — the #1 wallet heist vector
+
+Every `approve(token, spender, uint256.max)` you signed lets that spender drain the full token balance at any moment. Uniswap routers, bridges and 90% of dapps request them. Revoke anything you no longer use weekly (revoke.cash, etherscan token-approval checker, or a local script). Check your nonce-0 approval grants first — those never expire.
+
+> `chain-scout: run app.py, open the Approvals tab, revoke every 'dangerous' row`
+
