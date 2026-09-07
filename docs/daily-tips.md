@@ -110,3 +110,10 @@ Every `approve(token, spender, uint256.max)` you signed lets that spender drain 
 
 > `chain-scout: run app.py, open the Approvals tab, revoke every 'dangerous' row`
 
+
+## 2026-09-07 — Tip of the day: An EOA spender with an allowance is a standing risk
+
+Allowances should go to contracts, never to plain EOAs. A wallet that approved an EOA can have its balance pulled by a private key you don't control. Chain-scout flags any allowance whose spender has no code. If you ever see one in your own wallet, revoke it before you touch any other dapp.
+
+> `python -c 'from chain_scout.heuristics import classify_approval; ...'`
+
