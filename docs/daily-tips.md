@@ -117,3 +117,10 @@ Allowances should go to contracts, never to plain EOAs. A wallet that approved a
 
 > `python -c 'from chain_scout.heuristics import classify_approval; ...'`
 
+
+## 2026-09-08 — Tip of the day: Airdrops are the bait, approvals are the hook
+
+Dust and 'free' airdrops arrive from brand-new contracts precisely so you'll click: check the token page -> 'Approve to swap' -> sign a max-uint approval -> the airdrop contract or its 'migrate' frontend drains your real tokens. Treat any airdrop of a token you never bought as hostile until proven otherwise.
+
+> `chain-scout: the Inbound tab labels unknown-sender transfers`
+
