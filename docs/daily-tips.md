@@ -124,3 +124,10 @@ Dust and 'free' airdrops arrive from brand-new contracts precisely so you'll cli
 
 > `chain-scout: the Inbound tab labels unknown-sender transfers`
 
+
+## 2026-09-09 — Tip of the day: Meme tokens with tiny holder counts are rug bait
+
+A token with <2,500 holders, sub-$0.01 price and a top-10 concentration over 60% is statistically a pump-and-dump vehicle. You can't sell what nobody will buy — exit liquidity is the rug. Chain-scout's rug heuristics flag exactly this shape (holder proxy + concentration bands + liquidity ratio).
+
+> `chain-scout: RUGX demo token shows score 0.76 for this pattern`
+
