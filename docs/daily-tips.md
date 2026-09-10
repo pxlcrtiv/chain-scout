@@ -131,3 +131,10 @@ A token with <2,500 holders, sub-$0.01 price and a top-10 concentration over 60%
 
 > `chain-scout: RUGX demo token shows score 0.76 for this pattern`
 
+
+## 2026-09-10 — Tip of the day: Market cap vs liquidity: the 10x rule
+
+If a token's market cap is more than ~10x its DEX liquidity, even a successful small exit crashes the price — the classic soft-rug. A 20x+ ratio means the 'value' only exists on paper. Chain-scout computes mcap/liquidity per token when the data is available and scores the ratio into the token rug score.
+
+> `chain-scout: rug flag reason text shows the exact ratio band`
+
