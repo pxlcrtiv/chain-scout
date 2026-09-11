@@ -138,3 +138,10 @@ If a token's market cap is more than ~10x its DEX liquidity, even a successful s
 
 > `chain-scout: rug flag reason text shows the exact ratio band`
 
+
+## 2026-09-11 — Tip of the day: AI phishing is now fully automated — verify before you sign
+
+LLMs generate perfect fake dapp frontends, support chats and wallet-connect popups in seconds. The rule is unchanged: never sign a blind signature, never approve max-uint from a link in a DM, and always confirm the domain of the site that opened the signing window. 'The AI said it's fine' is not a security control.
+
+> `bookmark only: your wallet's phishing list + chain-scout for leftovers`
+
