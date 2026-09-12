@@ -145,3 +145,10 @@ LLMs generate perfect fake dapp frontends, support chats and wallet-connect popu
 
 > `bookmark only: your wallet's phishing list + chain-scout for leftovers`
 
+
+## 2026-09-12 — Tip of the day: Testnet-first: scan Sepolia before you touch mainnet
+
+Every scanner feature can be exercised on Sepolia with faucet tokens and zero financial risk. Chain-scout defaults to Sepolia for live scans; mainnet requires MAINNET_ALLOWED=1. Demo habits on testnets, then apply the same discipline on mainnet.
+
+> `MAINNET_ALLOWED=1 streamlit run app.py   # only when you mean it`
+
