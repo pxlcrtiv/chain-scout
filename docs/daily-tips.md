@@ -152,3 +152,10 @@ Every scanner feature can be exercised on Sepolia with faucet tokens and zero fi
 
 > `MAINNET_ALLOWED=1 streamlit run app.py   # only when you mean it`
 
+
+## 2026-09-13 — Tip of the day: Holder concentration is the single best on-chain rug predictor
+
+Top-10 holder share of a token supply tells you who can dump at will. 90%+ concentration = the team wallet is the market. Keyless APIs rarely expose top-10 lists, so chain-scout uses a holders-count proxy when needed — and always labels which source it used, so you know the confidence of the signal.
+
+> `chain-scout: concentration_signal() bands in heuristics.py`
+
