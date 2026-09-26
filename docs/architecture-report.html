@@ -10,7 +10,7 @@
 </head>
 <body class="bg-gray-950 text-gray-200 p-6 max-w-5xl mx-auto">
 <h1 class="text-2xl font-bold text-white mb-1">Architecture Report</h1>
-<p class="text-sm text-gray-500 mb-6">/Users/admin/portfolio/repos/chain-scout — scanned 2026-09-26T14:36:08.949943+00:00</p>
+<p class="text-sm text-gray-500 mb-6">/Users/admin/portfolio/repos/chain-scout — scanned 2026-09-26T14:37:35.179847+00:00</p>
 
 <div class="grid grid-cols-3 gap-4 mb-8">
   <div class="bg-gray-900 rounded-lg p-4 text-center">
@@ -28,47 +28,99 @@
 </div>
 
 
+    <div class="bg-gray-900 border border-amber-500/30 rounded-lg p-4 mb-6">
+      <div class="text-sm text-amber-400 font-semibold mb-1">Top recommendation</div>
+      <code class="text-white">tests/test_daily_green.py</code>
+      <p class="text-sm text-gray-400 mt-1">Shallow module: 12 exports, 97 lines</p>
+      <p class="text-xs text-gray-600 mt-2">Run the full <code>improve-codebase-architecture</code> skill on this repo to grill through the deepening.</p>
+    </div>
+
         <h2 class="text-lg font-semibold text-white mt-8 mb-3">Shallow Modules</h2>
         
         <div class="bg-gray-900 rounded-lg p-4 mb-3">
-          <div class="flex justify-between items-start">
+          <div class="flex justify-between items-start mb-3">
             <code class="text-sm text-amber-400">tests/test_daily_green.py</code>
             <span class="inline-block px-2 py-0.5 rounded text-xs font-bold text-white bg-amber-500">Worth exploring</span>
           </div>
-          <p class="text-sm mt-2 text-gray-400">12 public exports, 97 lines, low internal complexity — interface nearly as complex as the body.</p>
-          <p class="text-xs text-gray-600 mt-1">Exports: daily, pool, test_pool_has_enough_tips, test_pool_entries_wellformed, test_pool_titles_unique, test_rotation_is_deterministic, test_rotation_covers_consecutive_days, test_plan_days_idempotent_when_current, test_plan_days_backfills_gap, test_plan_days_never_predates_history</p>
+          <div class="grid grid-cols-2 gap-4 text-xs">
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">BEFORE — shallow</div>
+              <div class="text-gray-300">12 exports (daily, pool, test_pool_has_enough_tips, test_pool_entries_wellformed)<br>97 lines, ? decisions</div>
+            </div>
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">AFTER — deepened</div>
+              <div class="text-gray-300">Hide internals behind a seam<br>Reduce public surface by half</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-600 mt-2">Leverage: callers depend on fewer names. Locality: logic moves behind the interface.</p>
         </div>
         <div class="bg-gray-900 rounded-lg p-4 mb-3">
-          <div class="flex justify-between items-start">
+          <div class="flex justify-between items-start mb-3">
             <code class="text-sm text-amber-400">tests/test_report.py</code>
             <span class="inline-block px-2 py-0.5 rounded text-xs font-bold text-white bg-amber-500">Worth exploring</span>
           </div>
-          <p class="text-sm mt-2 text-gray-400">7 public exports, 94 lines, low internal complexity — interface nearly as complex as the body.</p>
-          <p class="text-xs text-gray-600 mt-1">Exports: test_rule_reporter_is_deterministic, test_rule_reporter_contains_key_sections, test_rule_reporter_lists_warnings_and_ruff_flags, test_llm_without_key_falls_back_to_rule, test_llm_unreachable_endpoint_falls_back, test_llm_uses_llm_when_endpoint_ok, test_llm_empty_response_falls_back</p>
+          <div class="grid grid-cols-2 gap-4 text-xs">
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">BEFORE — shallow</div>
+              <div class="text-gray-300">7 exports (test_rule_reporter_is_deterministic, test_rule_reporter_contains_key_sections, test_rule_reporter_lists_warnings_and_ruff_flags, test_llm_without_key_falls_back_to_rule)<br>94 lines, ? decisions</div>
+            </div>
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">AFTER — deepened</div>
+              <div class="text-gray-300">Hide internals behind a seam<br>Reduce public surface by half</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-600 mt-2">Leverage: callers depend on fewer names. Locality: logic moves behind the interface.</p>
         </div>
         <div class="bg-gray-900 rounded-lg p-4 mb-3">
-          <div class="flex justify-between items-start">
+          <div class="flex justify-between items-start mb-3">
             <code class="text-sm text-amber-400">tests/test_scoring_formula.py</code>
             <span class="inline-block px-2 py-0.5 rounded text-xs font-bold text-white bg-amber-500">Worth exploring</span>
           </div>
-          <p class="text-sm mt-2 text-gray-400">5 public exports, 51 lines, low internal complexity — interface nearly as complex as the body.</p>
-          <p class="text-xs text-gray-600 mt-1">Exports: test_all_known_denominator_is_one, test_unknown_signals_renormalize, test_unknown_does_not_punish, test_composite_rounding, test_band_boundaries_via_composite</p>
+          <div class="grid grid-cols-2 gap-4 text-xs">
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">BEFORE — shallow</div>
+              <div class="text-gray-300">5 exports (test_all_known_denominator_is_one, test_unknown_signals_renormalize, test_unknown_does_not_punish, test_composite_rounding)<br>51 lines, ? decisions</div>
+            </div>
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">AFTER — deepened</div>
+              <div class="text-gray-300">Hide internals behind a seam<br>Reduce public surface by half</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-600 mt-2">Leverage: callers depend on fewer names. Locality: logic moves behind the interface.</p>
         </div>
         <div class="bg-gray-900 rounded-lg p-4 mb-3">
-          <div class="flex justify-between items-start">
+          <div class="flex justify-between items-start mb-3">
             <code class="text-sm text-amber-400">tests/test_pricing.py</code>
             <span class="inline-block px-2 py-0.5 rounded text-xs font-bold text-white bg-amber-500">Worth exploring</span>
           </div>
-          <p class="text-sm mt-2 text-gray-400">6 public exports, 74 lines, low internal complexity — interface nearly as complex as the body.</p>
-          <p class="text-xs text-gray-600 mt-1">Exports: test_pnl_math, test_pnl_unknown_basis_reported_not_fabricated, test_pnl_totals_only_cover_known_basis, test_coin_gecko_fallback_on_network_error, test_coin_gecko_parses_response, test_pnl_demo_flag_propagates</p>
+          <div class="grid grid-cols-2 gap-4 text-xs">
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">BEFORE — shallow</div>
+              <div class="text-gray-300">6 exports (test_pnl_math, test_pnl_unknown_basis_reported_not_fabricated, test_pnl_totals_only_cover_known_basis, test_coin_gecko_fallback_on_network_error)<br>74 lines, ? decisions</div>
+            </div>
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">AFTER — deepened</div>
+              <div class="text-gray-300">Hide internals behind a seam<br>Reduce public surface by half</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-600 mt-2">Leverage: callers depend on fewer names. Locality: logic moves behind the interface.</p>
         </div>
         <div class="bg-gray-900 rounded-lg p-4 mb-3">
-          <div class="flex justify-between items-start">
+          <div class="flex justify-between items-start mb-3">
             <code class="text-sm text-amber-400">tests/test_scoring_golden.py</code>
             <span class="inline-block px-2 py-0.5 rounded text-xs font-bold text-white bg-amber-500">Worth exploring</span>
           </div>
-          <p class="text-sm mt-2 text-gray-400">8 public exports, 100 lines, low internal complexity — interface nearly as complex as the body.</p>
-          <p class="text-xs text-gray-600 mt-1">Exports: test_golden_clean_wallet_scores_zero_low, test_golden_rug_heavy_wallet, test_golden_approval_heavy_wallet, test_golden_dust_heavy_wallet, test_golden_inbound_heavy_wallet, test_golden_score_matches_hand_computation, test_band_edges, test_score_clamped_to_100</p>
+          <div class="grid grid-cols-2 gap-4 text-xs">
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">BEFORE — shallow</div>
+              <div class="text-gray-300">8 exports (test_golden_clean_wallet_scores_zero_low, test_golden_rug_heavy_wallet, test_golden_approval_heavy_wallet, test_golden_dust_heavy_wallet)<br>100 lines, ? decisions</div>
+            </div>
+            <div class="bg-gray-800 rounded p-3">
+              <div class="text-gray-500 mb-1">AFTER — deepened</div>
+              <div class="text-gray-300">Hide internals behind a seam<br>Reduce public surface by half</div>
+            </div>
+          </div>
+          <p class="text-xs text-gray-600 mt-2">Leverage: callers depend on fewer names. Locality: logic moves behind the interface.</p>
         </div>
 <h2 class="text-lg font-semibold text-white mt-8 mb-3">High Coupling</h2>
         <div class="bg-gray-900 rounded-lg p-4 mb-3">
@@ -88,6 +140,103 @@
           <p class="text-xs text-gray-500 mt-1">Imports 4 internal modules: re, chain_scout, chain_scout, chain_scout</p>
         </div>
 
+
+    <h2 class="text-lg font-semibold text-white mt-8 mb-3">Dependency Graph</h2>
+    <div class="bg-gray-900 rounded-lg p-4 mb-3">
+      <pre class="text-xs text-gray-400 overflow-x-auto">graph TD
+  app_py --> __future__
+  app_py --> streamlit
+  app_py --> chain_scout
+  chain_scout_config_py --> __future__
+  chain_scout_config_py --> os
+  chain_scout_config_py --> pathlib
+  chain_scout_analysis_py --> __future__
+  chain_scout_analysis_py --> datetime
+  chain_scout_analysis_py --> models
+  chain_scout_analysis_py --> scoring
+  chain_scout_models_py --> __future__
+  chain_scout_models_py --> dataclasses
+  chain_scout_models_py --> datetime
+  chain_scout_provider_py --> __future__
+  chain_scout_provider_py --> json
+  chain_scout_provider_py --> re
+  chain_scout_provider_py --> pathlib
+  chain_scout_provider_py --> web3
+  chain_scout_provider_py --> models
+  chain_scout_heuristics_py --> __future__
+  chain_scout_heuristics_py --> datetime
+  chain_scout_heuristics_py --> models
+  chain_scout_scoring_py --> __future__
+  chain_scout_scoring_py --> datetime
+  chain_scout_scoring_py --> models
+  chain_scout_scoring_py --> pricing
+  chain_scout___init___py --> config
+  chain_scout_pricing_py --> __future__
+  chain_scout_pricing_py --> time
+  chain_scout_pricing_py --> requests
+  chain_scout_pricing_py --> models
+  chain_scout_report_py --> __future__
+  chain_scout_report_py --> json
+  chain_scout_report_py --> requests
+  chain_scout_report_py --> models
+  chain_scout_report_py --> heuristics
+  tests_test_daily_green_py --> __future__
+  tests_test_daily_green_py --> datetime
+  tests_test_daily_green_py --> importlib
+  tests_test_daily_green_py --> json
+  tests_test_daily_green_py --> pathlib
+  tests_test_daily_green_py --> pytest
+  tests_test_analysis_py --> __future__
+  tests_test_analysis_py --> pytest
+  tests_test_analysis_py --> chain_scout
+  tests_test_report_py --> __future__
+  tests_test_report_py --> chain_scout
+  tests_test_report_py --> helpers
+  tests_test_scoring_formula_py --> __future__
+  tests_test_scoring_formula_py --> chain_scout
+  tests_test_provider_py --> __future__
+  tests_test_provider_py --> json
+  tests_test_provider_py --> pytest
+  tests_test_provider_py --> chain_scout
+  tests_test_provider_py --> helpers
+  tests_test_provider_py --> web3
+  tests_test_pricing_py --> __future__
+  tests_test_pricing_py --> chain_scout
+  tests_test_pricing_py --> helpers
+  tests_test_scoring_golden_py --> __future__
+  tests_test_scoring_golden_py --> chain_scout
+  tests_test_scoring_golden_py --> helpers
+  tests_helpers_py --> __future__
+  tests_helpers_py --> hashlib
+  tests_helpers_py --> datetime
+  tests_helpers_py --> chain_scout
+  tests_test_heuristics_py --> __future__
+  tests_test_heuristics_py --> datetime
+  tests_test_heuristics_py --> chain_scout
+  tests_test_heuristics_py --> helpers
+  tests_test_fixture_integrity_py --> __future__
+  tests_test_fixture_integrity_py --> re
+  tests_test_fixture_integrity_py --> pathlib
+  tests_test_fixture_integrity_py --> pytest
+  tests_test_fixture_integrity_py --> chain_scout
+  tests_test_fixture_integrity_py --> json
+  scripts_daily_update_py --> __future__
+  scripts_daily_update_py --> datetime
+  scripts_daily_update_py --> json
+  scripts_daily_update_py --> os
+  scripts_daily_update_py --> re
+  scripts_daily_update_py --> subprocess
+  scripts_daily_update_py --> sys
+  scripts_daily_update_py --> pathlib
+  scripts_fetch_fixtures_py --> __future__
+  scripts_fetch_fixtures_py --> argparse
+  scripts_fetch_fixtures_py --> datetime
+  scripts_fetch_fixtures_py --> json
+  scripts_fetch_fixtures_py --> sys
+  scripts_fetch_fixtures_py --> pathlib
+  scripts_fetch_fixtures_py --> requests
+  scripts_fetch_fixtures_py --> re</pre>
+    </div>
 
 </body>
 </html>
