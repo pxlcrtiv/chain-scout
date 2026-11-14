@@ -577,5 +577,16 @@ Allowances should go to contracts, never to plain EOAs. A wallet that approved a
 
 Dust and 'free' airdrops arrive from brand-new contracts precisely so you'll click: check the token page -> 'Approve to swap' -> sign a max-uint approval -> the airdrop contract or its 'migrate' frontend drains your real tokens. Treat any airdrop of a token you never bought as hostile until proven otherwise.
 
+<<<<<<< Updated upstream
 > `chain-scout: the Inbound tab labels unknown-sender transfers`
+
+=======
+> `chain-scout: the In
+>>>>>>> Stashed changes
+
+## 2026-11-14 — Tip of the day: Meme tokens with tiny holder counts are rug bait
+
+A token with <2,500 holders, sub-$0.01 price and a top-10 concentration over 60% is statistically a pump-and-dump vehicle. You can't sell what nobody will buy — exit liquidity is the rug. Chain-scout's rug heuristics flag exactly this shape (holder proxy + concentration bands + liquidity ratio).
+
+> `chain-scout: RUGX demo token shows score 0.76 for this pattern`
 
